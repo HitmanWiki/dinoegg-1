@@ -1,7 +1,7 @@
 import requests
 import json
 
-from telegram.ext.dispatcher import run_async
+from telegram.ext import run_async
 
 from pricebot.config import *
 from pricebot.parse_apis import parse_api_coinmarketcapjson, parse_api_globalinfoapijson, module_logger
