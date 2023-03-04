@@ -142,7 +142,7 @@ def parse_api_coinmarketcapjson(message_ticker:str):
 
         # TODO send a message to the admin (a chat, a group, a channel)
 
-    return '💲 *Dino Egg AI*' + msg_parse_api
+    return '💲 *PA_Test*' + msg_parse_api
 
 
 def parse_api_globalinfoapijson():
@@ -180,7 +180,7 @@ def parse_api_globalinfoapijson():
         vol24h = globalinfoapijson['data']['quote']['USD']['total_volume_24h']
         btc_dominance = globalinfoapijson['data']['btc_dominance']
 
-        text = emojize(':chart_with_upwards_trend: *Dino Egg Info*'
+        text = emojize(':chart_with_upwards_trend: *PA_Test*'
                    + '\nMarket Cap: *$' + sep(marketcap) + '*'
                    + '\n24h Vol: *$' + sep(vol24h) + '*'
                    + '\nBTC Dominance: *{}'.format(btc_dominance) + '%*', use_aliases=True)
