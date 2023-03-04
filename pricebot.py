@@ -6,6 +6,10 @@ from pricebot.config import TOKEN_BOT, TIME_INTERVAL
 
 from pricebot.parse_apis import module_logger
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 def main():
     module_logger.info("Start the pricebot!")
