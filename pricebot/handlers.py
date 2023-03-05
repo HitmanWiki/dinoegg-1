@@ -1,7 +1,7 @@
 import requests
 import json
 
-from telegram.ext import run_async
+from telegram.ext.dispatcher import run_async
 
 from pricebot.config import *
 from pricebot.parse_apis import parse_api_coinmarketcapjson, parse_api_globalinfoapijson, module_logger
@@ -15,8 +15,8 @@ def error(update, context):
 
 
 # "/p coin" command's handler
-run_async
-def  price(update, context):
+@run_async
+def price(update, context):
     """
     the handler of the user command "price"
     """
@@ -55,7 +55,7 @@ def  price(update, context):
 
 
 # "/cap" command's handler
-run_async
+@run_async
 def cap(update, context):
     """
     the handler of the user command "price"
@@ -89,14 +89,12 @@ def cap(update, context):
 
 
 # job queue to download CoinMarket API all coins list
-run_async
+@run_async
 def download_api_coinslists_handler(context):
     """
     the handler for download the lists of coins from API agregators by job_queue of telegram.ext
-
     :param  bot: a telegram bot main object
     :type   bot: Bot
-
     :param  job: job.context is a name of the site-agregator, which has been send from job_queue.run_repeating... method
     :type   job: Job
     """
@@ -132,7 +130,7 @@ def download_api_coinslists_handler(context):
 
 
 # job queue to download CoinMarket API Global Data
-run_async
+@run_async
 def download_api_global_handler(context):
     """
     the handler for download global Coin Market Cap API Info by job_queue of telegram.ext
