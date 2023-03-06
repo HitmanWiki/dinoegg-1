@@ -1,7 +1,7 @@
 import os
 
 # the token of your bot
-TOKEN_BOT = '6116796282:AAEsALgakQnls77UjirrPE3w_P892EmrBNg'
+TOKEN_BOT = '6133746543:AAEMsxaHCINg3uAFaFyn5r1dT9Q3w_0WMKo'
 
 # do APIs requests with pause
 TIME_INTERVAL = 3600
